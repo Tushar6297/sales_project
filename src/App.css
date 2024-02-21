@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form h2{
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+
+/* navbar */
+body {
+    background-color: #fbfbfb;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 240px;
+    z-index: 600;
   }
-}
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+
+
+
+  /*---------------------- cards css---------------------- */
+  .counter {
+    color: #F14997;
+    background: linear-gradient(to right bottom, #fff 50%, #f9f9f9 51%);
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    width: 250px;
+    padding: 20px 0 0 ;
+    margin: 0 auto;
+    border-radius: 50px 0;
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    height: 300px;
+  }
+  
+  .counter .counter-icon {
+    font-size: 45px;
+    margin: 0 0 10px;
+  }
+  
+  .counter h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+  }
+  
+  .counter .counter-value {
+    color: #fff;
+    background: linear-gradient(to right bottom, #FD8ED2, #F14997);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 7px 0 3px;
+    display: block;
+  }
+  
+  .counter.blue {
+    color: #0092CD;
+  }
+  
+  .counter.blue .counter-value {
+    background: linear-gradient(to right bottom, #06BBF4, #0092CD);
+  }
+  
+  .counter.orange {
+    color: #FB9A00;
+  }
+  
+  .counter.orange .counter-value {
+    background: linear-gradient(to right bottom, #FCCA09, #FB9A00);
+  }
+  
+  .counter.green {
+    color: #03BFB0;
+  }
+  
+  .counter.green .counter-value {
+    background: linear-gradient(to right bottom, #00E2CD, #03BFB0);
+  }
+  
+  @media screen and (max-width:990px) {
+    .counter {
+        margin-bottom: 40px;
+    }
+  }
+  
+
+  
